@@ -58,4 +58,5 @@ body .banner .banner_loudspeaker .f_r button {
   color: white;
   border-radius: 5px;
   font-size: 20px;
+  cursor: pointer;
 }

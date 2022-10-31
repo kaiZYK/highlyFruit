@@ -136,3 +136,25 @@
   cursor: pointer;
   font-size: 20px;
 }
+.registered .content .inner .remember {
+  width: 385px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  color: #5a5a5a;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.registered .content .inner .remember input {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.registered .content .inner .remember label {
+  cursor: pointer;
+  vertical-align: middle;
+}
+.registered .content .inner .remember a {
+  float: right;
+  color: #5a5a5a;
+}
