@@ -1,11 +1,9 @@
-.auto {
-  margin: 0 auto;
-}
+/* 标题部分 */
 .title {
   width: 100%;
   height: 170px;
   color: #333333;
-  margin: 0 auto;
+  margin: 0px auto;
   background-color: #ffffff;
   text-align: center;
   overflow: hidden;
@@ -28,7 +26,7 @@
   box-sizing: border-box;
 }
 .title ul li a {
-  font-size: 20px;
+  font-size: 18px;
   color: #a3a3a3;
 }
 .active {
@@ -36,4 +34,28 @@
 }
 .active_a {
   color: #fe5431 !important;
+}
+/* 加载更多部分 */
+.loading {
+  margin: 0px auto;
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 50px 0px;
+}
+.loading a {
+  display: inline-block;
+  width: 130px;
+  color: #fe5431;
+  text-indent: 1em;
+}
+.loading .more {
+  background-image: url(../img/icon/more.png);
+  background-repeat: no-repeat;
+  background-position: 5px 8px;
+}
+.loading .under {
+  background-image: url(../img/icon/loading-icon.gif);
+  background-repeat: no-repeat;
+  background-position: 5px 1px;
+  display: none;
 }
