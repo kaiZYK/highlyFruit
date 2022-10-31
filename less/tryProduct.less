@@ -94,17 +94,12 @@ section {
 /* < !-- 中间内容 --> */
 .content {
     width: 1000px;
-    margin: 0 auto;
-
-
-
-
+    margin: 20px auto;
 
     // background-color: aquamarine;
 
-
-
-    height: 2480px;
+    height: auto;
+    overflow: hidden;
 
     /* < !-- 产品介绍 （版心左边） --> */
     .content_left {
@@ -212,18 +207,24 @@ section {
             // background-color: rgb(176, 127, 255);
 
             ul {
-
+                width: auto;
 
 
                 li {
+
                     border: 1px solid #e6e9e9;
                     border-radius: 6px;
-                    margin-right: 37px;
+                    margin-right: 32.91px;
                     float: left;
                     height: 285px;
                     width: 220px;
                     // background-color: greenyellow;
                     position: relative;
+
+                    /* 动画 */
+                    &>a:hover img {
+                        animation: shade ease 1.2s infinite;
+                    }
 
                     &>a>span {
                         position: absolute;
@@ -301,15 +302,21 @@ section {
                                 172);
                     }
 
-                    .green {
+                    .green_border {
                         border: 1px solid rgb(161,
                                 194,
                                 105);
+                    }
+
+                    .green {
+
                         color: rgb(161,
                                 194,
                                 105);
                     }
                 }
+
+
 
 
             }

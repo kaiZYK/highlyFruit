@@ -59,8 +59,9 @@ section .flow ul li:hover {
 /* < !-- 中间内容 --> */
 .content {
   width: 1000px;
-  margin: 0 auto;
-  height: 2480px;
+  margin: 20px auto;
+  height: auto;
+  overflow: hidden;
   /* < !-- 产品介绍 （版心左边） --> */
   /* < !-- 产品介绍 （版心右边） --> */
   /*   < !-- 热门试用 （版心下边） --> */
@@ -145,14 +146,21 @@ section .flow ul li:hover {
 .content .hot_shiyong .hot_shiyong_bottom {
   height: 300px;
 }
+.content .hot_shiyong .hot_shiyong_bottom ul {
+  width: auto;
+}
 .content .hot_shiyong .hot_shiyong_bottom ul li {
   border: 1px solid #e6e9e9;
   border-radius: 6px;
-  margin-right: 37px;
+  margin-right: 32.91px;
   float: left;
   height: 285px;
   width: 220px;
   position: relative;
+  /* 动画 */
+}
+.content .hot_shiyong .hot_shiyong_bottom ul li > a:hover img {
+  animation: shade ease 1.2s infinite;
 }
 .content .hot_shiyong .hot_shiyong_bottom ul li > a > span {
   position: absolute;
@@ -203,7 +211,9 @@ section .flow ul li:hover {
   background: #fbf4cb;
   color: #c4baac;
 }
-.content .hot_shiyong .hot_shiyong_bottom ul li:nth-of-type(2) .green {
+.content .hot_shiyong .hot_shiyong_bottom ul li:nth-of-type(2) .green_border {
   border: 1px solid #a1c269;
+}
+.content .hot_shiyong .hot_shiyong_bottom ul li:nth-of-type(2) .green {
   color: #a1c269;
 }
