@@ -1,10 +1,77 @@
-.auto {
-  margin: 0 auto;
+/* 内容部分 */
+.content {
+  width: 100%;
+  height: auto;
+  background-color: #f7f7f7;
 }
-* {
-  padding: 0;
-  margin: 0;
+.content ul {
+  width: 1000px;
+  height: auto;
+  margin: 0px auto;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-li {
-  list-style-type: none;
+.content ul li {
+  width: 220px;
+  height: 230px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #e6e9e9;
+  overflow: hidden;
+  float: left;
+  margin-right: 36.8px;
+  margin-top: 20px;
+}
+.content ul li:nth-of-type(4n) {
+  margin-right: 0px;
+}
+.content ul li > a .content_pic {
+  width: 100%;
+  height: 130px;
+}
+.content ul li > a > div {
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+.content ul li > a > div .content_title {
+  font-size: 14px;
+  color: #474747;
+}
+.content ul li > a > div .content_introduce {
+  font-size: 12px;
+  color: #a3a3a3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.content ul li > a > div .content_price {
+  float: left;
+  color: #fe5431;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.content ul li > a > div .icon {
+  vertical-align: middle;
+  float: right;
+  color: #a3a3a3;
+  font-size: 12px;
+}
+.content ul li > a > div .icon span {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  text-indent: 1.5em;
+}
+.content ul li > a > div .icon span:nth-of-type(1) {
+  background-image: url("../img/icon/xin.png");
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+}
+.content ul li > a > div .icon span:nth-of-type(2) {
+  background-image: url("../img/icon/reply.png");
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
 }

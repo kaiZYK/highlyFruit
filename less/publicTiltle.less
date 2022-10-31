@@ -1,9 +1,19 @@
+// 字体颜色
 @color-red: #fe5431;
 @color-title: #333333;
 @color-gray: #a3a3a3;
 @bgc-white: #ffffff;
-.auto {
-  margin: 0 auto;
+
+// 居中
+.auto(@top:0px) {
+  margin: @top auto;
+}
+
+// 背景图片
+.background(@url,@repeat:no-repeat,@x:0px,@y:0px) {
+  background-image: @url;
+  background-repeat: @repeat;
+  background-position: @x @y;
 }
 
 .title {
@@ -30,7 +40,7 @@
       height: 100%;
       box-sizing: border-box;
       a {
-        font-size: 20px;
+        font-size: 18px;
         color: @color-gray;
       }
     }
@@ -41,4 +51,24 @@
 }
 .active_a {
   color: @color-red !important;
+}
+
+.loading {
+  .auto();
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 50px 0px;
+  a {
+    display: inline-block;
+    width: 130px;
+    color: @color-red;
+    text-indent: 1em;
+  }
+  .more {
+    .background(url(../img/icon/more.png),no-repeat,5px,8px);
+  }
+  .under {
+    .background(url(../img/icon/loading-icon.gif),no-repeat,5px,1px);
+    display: none;
+  }
 }
