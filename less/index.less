@@ -1,0 +1,213 @@
+// 字体颜色
+@color-red: #fe5431;
+@color-title: #333333;
+@color-black: #474747;
+@color-gray: #a3a3a3;
+
+// 背景颜色
+@bgc-white: #ffffff;
+
+// 居中
+.auto(@top:0px) {
+  margin: @top auto;
+}
+
+// 背景图片
+.background(@url,@repeat:no-repeat,@x:0px,@y:0px) {
+  background-image: @url;
+  background-repeat: @repeat;
+  background-position: @x @y;
+}
+
+.content {
+  & > div {
+    width: 1000px;
+    height: auto;
+    overflow: hidden;
+    .auto;
+    span {
+      font-size: 20px;
+      font-weight: 600;
+      color: @color-black;
+    }
+    a {
+      width: 75px;
+      float: right;
+      color: @color-red;
+      font-size: 14px;
+      .background(url(../img/icon/readMore.png),no-repeat,58px,5px);
+    }
+  }
+}
+
+/* 酷玩部分 */
+.content,
+.coldplay {
+  width: 100%;
+  height: auto;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  padding: 25px 0px 40px 0px;
+  ul {
+    width: 1000px;
+    height: auto;
+    .auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    li {
+      width: 220px;
+      height: 230px;
+      border-radius: 5px;
+      overflow: hidden;
+      float: left;
+      margin-right: 36.8px;
+      margin-top: 20px;
+      &:nth-of-type(4n) {
+        margin-right: 0px;
+      }
+
+      & > a {
+        .content_pic {
+          width: 100%;
+          height: 130px;
+          &:hover {
+            animation: shade ease 1.2s infinite;
+          }
+        }
+        & > div {
+          width: 100%;
+          height: 100px;
+          box-sizing: border-box;
+          padding: 5px 10px;
+          background-color: @bgc-white;
+          border: 1px solid #e6e9e9;
+          border-radius: 5px;
+          .content_title {
+            font-size: 14px;
+            color: @color-black;
+          }
+          .content_introduce {
+            font-size: 12px;
+            color: @color-gray;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-bottom: 20px;
+          }
+          .content_price {
+            float: left;
+            color: @color-red;
+            font-size: 14px;
+            vertical-align: middle;
+          }
+          .icon {
+            vertical-align: middle;
+            float: right;
+            color: @color-gray;
+            font-size: 12px;
+            span {
+              display: inline-block;
+              width: 30px;
+              height: 20px;
+              text-indent: 1.5em;
+              &:nth-of-type(1) {
+                .background(url("../img/icon/xin.png"),no-repeat,2px,2px);
+              }
+              &:nth-of-type(2) {
+                .background(url("../img/icon/reply.png"),no-repeat,2px,2px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.coldplay {
+  padding-bottom: 0px;
+}
+
+/* 报告精选 */
+.report {
+  ul {
+    li {
+      height: 250px;
+      a {
+        div {
+          position: relative;
+          .report-author,
+          .icon {
+            position: absolute;
+          }
+          .report-author {
+            left: 10px;
+            bottom: 19px;
+            font-size: 12px;
+            color: @color-gray;
+          }
+          .icon {
+            right: 10px;
+            bottom: 15px;
+            span {
+              display: inline-block;
+              width: 30px;
+              height: 20px;
+              text-indent: 1.5em;
+              &:nth-of-type(1) {
+                .background(url("../img/icon/zan.png"),no-repeat,2px,2px);
+              }
+              &:nth-of-type(2) {
+                .background(url("../img/icon/reply.png"),no-repeat,2px,2px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 导购部分 */
+.shop {
+  background-color: @bgc-white;
+  ul {
+    li {
+      height: 250px;
+      overflow: visible !important;
+      a {
+        position: relative;
+        & > div:nth-of-type(1),
+        & > div:nth-of-type(2) {
+          position: absolute;
+          background-color: #ffffff;
+          border-bottom: 1px solid #e1e4e5;
+          border-radius: 5px;
+        }
+        & > div:nth-of-type(1) {
+          width: 180px;
+          height: 20px;
+          top: 110px;
+          left: 16px;
+          z-index: 1;
+        }
+        & > div:nth-of-type(2) {
+          width: 200px;
+          height: 30px;
+          top: 96px;
+          left: 9px;
+          z-index: 2;
+        }
+        & > div:nth-of-type(3) {
+          z-index: 3;
+          position: relative;
+          border-bottom: 1px solid #e1e4e5;
+          .icon {
+            position: absolute;
+            right: 10px;
+            bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}

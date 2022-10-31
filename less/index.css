@@ -1,0 +1,199 @@
+.content > div {
+  width: 1000px;
+  height: auto;
+  overflow: hidden;
+  margin: 0px auto;
+}
+.content > div span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #474747;
+}
+.content > div a {
+  width: 75px;
+  float: right;
+  color: #fe5431;
+  font-size: 14px;
+  background-image: url(../img/icon/readMore.png);
+  background-repeat: no-repeat;
+  background-position: 58px 5px;
+}
+/* 酷玩部分 */
+.content,
+.coldplay {
+  width: 100%;
+  height: auto;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  padding: 25px 0px 40px 0px;
+}
+.content ul,
+.coldplay ul {
+  width: 1000px;
+  height: auto;
+  margin: 0px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.content ul li,
+.coldplay ul li {
+  width: 220px;
+  height: 230px;
+  border-radius: 5px;
+  overflow: hidden;
+  float: left;
+  margin-right: 36.8px;
+  margin-top: 20px;
+}
+.content ul li:nth-of-type(4n),
+.coldplay ul li:nth-of-type(4n) {
+  margin-right: 0px;
+}
+.content ul li > a .content_pic,
+.coldplay ul li > a .content_pic {
+  width: 100%;
+  height: 130px;
+}
+.content ul li > a .content_pic:hover,
+.coldplay ul li > a .content_pic:hover {
+  animation: shade ease 1.2s infinite;
+}
+.content ul li > a > div,
+.coldplay ul li > a > div {
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  border: 1px solid #e6e9e9;
+  border-radius: 5px;
+}
+.content ul li > a > div .content_title,
+.coldplay ul li > a > div .content_title {
+  font-size: 14px;
+  color: #474747;
+}
+.content ul li > a > div .content_introduce,
+.coldplay ul li > a > div .content_introduce {
+  font-size: 12px;
+  color: #a3a3a3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.content ul li > a > div .content_price,
+.coldplay ul li > a > div .content_price {
+  float: left;
+  color: #fe5431;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.content ul li > a > div .icon,
+.coldplay ul li > a > div .icon {
+  vertical-align: middle;
+  float: right;
+  color: #a3a3a3;
+  font-size: 12px;
+}
+.content ul li > a > div .icon span,
+.coldplay ul li > a > div .icon span {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  text-indent: 1.5em;
+}
+.content ul li > a > div .icon span:nth-of-type(1),
+.coldplay ul li > a > div .icon span:nth-of-type(1) {
+  background-image: url("../img/icon/xin.png");
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+}
+.content ul li > a > div .icon span:nth-of-type(2),
+.coldplay ul li > a > div .icon span:nth-of-type(2) {
+  background-image: url("../img/icon/reply.png");
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+}
+.coldplay {
+  padding-bottom: 0px;
+}
+/* 报告精选 */
+.report ul li {
+  height: 250px;
+}
+.report ul li a div {
+  position: relative;
+}
+.report ul li a div .report-author,
+.report ul li a div .icon {
+  position: absolute;
+}
+.report ul li a div .report-author {
+  left: 10px;
+  bottom: 19px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+.report ul li a div .icon {
+  right: 10px;
+  bottom: 15px;
+}
+.report ul li a div .icon span {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  text-indent: 1.5em;
+}
+.report ul li a div .icon span:nth-of-type(1) {
+  background-image: url("../img/icon/zan.png");
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+}
+.report ul li a div .icon span:nth-of-type(2) {
+  background-image: url("../img/icon/reply.png");
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+}
+/* 导购部分 */
+.shop {
+  background-color: #ffffff;
+}
+.shop ul li {
+  height: 250px;
+  overflow: visible !important;
+}
+.shop ul li a {
+  position: relative;
+}
+.shop ul li a > div:nth-of-type(1),
+.shop ul li a > div:nth-of-type(2) {
+  position: absolute;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e1e4e5;
+  border-radius: 5px;
+}
+.shop ul li a > div:nth-of-type(1) {
+  width: 180px;
+  height: 20px;
+  top: 110px;
+  left: 16px;
+  z-index: 1;
+}
+.shop ul li a > div:nth-of-type(2) {
+  width: 200px;
+  height: 30px;
+  top: 96px;
+  left: 9px;
+  z-index: 2;
+}
+.shop ul li a > div:nth-of-type(3) {
+  z-index: 3;
+  position: relative;
+  border-bottom: 1px solid #e1e4e5;
+}
+.shop ul li a > div:nth-of-type(3) .icon {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
