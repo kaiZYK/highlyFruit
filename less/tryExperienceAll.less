@@ -1,0 +1,240 @@
+/* 字体颜色 */
+@color-gray: rgb(204,
+        204,
+        204);
+@color-green: rgb(128,
+        194,
+        105);
+@color-orange: rgb(254,
+        83,
+        65);
+
+
+
+/*  */
+
+body {
+
+    /* 标题部分 */
+    .title {
+        // background-color: aqua;
+        border-bottom: 1px solid rgba(240,
+                240,
+                240);
+    }
+
+    /* 标题二级导航 */
+    .title_1 {
+        height: 65px;
+
+        .title_1_on {
+            color: #333;
+        }
+    }
+
+    /* 版心 */
+    .type_area {
+        width: 100%;
+        height: auto;
+        background-color: rgb(247,
+                247,
+                247);
+
+        div {
+            width: 1000px;
+            height: auto;
+            margin: 0 auto;
+
+            ul {
+                padding-bottom: 31.5px;
+
+                li {
+                    height: 285px;
+                    width: 220px;
+                    background-color: white;
+                    border: 1px solid #e6e9e9;
+                    border-radius: 6px;
+                    margin-right: 31.49px;
+                    float: left;
+                    position: relative;
+
+                    /* 动画 公共引入 */
+                    img:hover {
+                        animation: shade ease 1.2s infinite;
+                    }
+
+                    /* 首发样式 */
+                    .right_label {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background: #fe5341;
+                        color: #f5e8e8;
+                        padding: 2px 8px;
+                        border-radius: 0 0 0 6px;
+                        font-size: 12px;
+                        z-index: 1;
+                    }
+
+                    /* 体验师专享样式 */
+                    .tiyanshi {
+                        background: rgb(251,
+                                244,
+                                203);
+                        color: rgb(196,
+                                169,
+                                106);
+                    }
+
+                    a {
+                        color: #333;
+
+                        img {
+                            width: 220px;
+                        }
+
+                        /* 灰色样式 */
+                        .list_num_gray {
+                            width: 100%;
+                            text-align: center;
+                            padding: 8px 8px 14px;
+                            box-sizing: border-box;
+
+                            h2 {
+
+                                font-size: 16px;
+                                height: 48px;
+                                font-weight: bold;
+
+                            }
+
+                            .num {
+                                padding: 6px 0;
+
+                                &>span {
+                                    font-size: 14px;
+                                    border-radius: 5px;
+                                    padding: 2px 10px;
+                                    margin: 0 5px;
+                                    color: @color-gray;
+                                    border: 1px solid @color-gray ;
+                                }
+                            }
+
+                            .shenqing {
+                                margin-top: 3px;
+
+                                span {
+                                    color: #fe5341;
+                                }
+                            }
+
+                            .shuliang {
+                                margin-top: 5px;
+                                font-size: 14px;
+                                color: @color-gray;
+                            }
+
+                        }
+
+                        /* 橙色样式 */
+                        .list_num_orange {
+                            width: 100%;
+                            text-align: center;
+                            padding: 8px 8px 14px;
+                            box-sizing: border-box;
+
+                            h2 {
+
+                                font-size: 16px;
+                                height: 48px;
+                                font-weight: bold;
+
+                            }
+
+                            .num {
+                                padding: 6px 0;
+
+                                &>span {
+                                    font-size: 14px;
+                                    border-radius: 5px;
+                                    padding: 2px 10px;
+                                    margin: 0 5px;
+                                    color: @color-orange;
+                                    border: 1px solid @color-orange ;
+                                }
+                            }
+
+                            .shenqing {
+                                margin-top: 3px;
+
+                                span {
+                                    color: #fe5341;
+                                }
+                            }
+
+                            .shuliang {
+                                margin-top: 5px;
+                                font-size: 14px;
+                                color: @color-orange;
+                            }
+
+                        }
+
+                        /* 绿色样式 */
+                        .list_num_green {
+                            width: 100%;
+                            text-align: center;
+                            padding: 8px 8px 14px;
+                            box-sizing: border-box;
+
+                            h2 {
+
+                                font-size: 16px;
+                                height: 48px;
+                                font-weight: bold;
+
+                            }
+
+                            .num {
+                                padding: 6px 0;
+
+                                &>span {
+                                    font-size: 14px;
+                                    border-radius: 5px;
+                                    padding: 2px 10px;
+                                    margin: 0 5px;
+                                    color: @color-green;
+                                    border: 1px solid @color-green ;
+                                }
+                            }
+
+                            .shenqing {
+                                margin-top: 3px;
+
+                                span {
+                                    color: #fe5341;
+                                }
+                            }
+
+                            .shuliang {
+                                margin-top: 5px;
+                                font-size: 14px;
+                                color: @color-green;
+                            }
+
+                        }
+                    }
+                }
+
+                li:nth-of-type(4n) {
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
+
+
+
+}
