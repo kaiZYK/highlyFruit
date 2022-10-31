@@ -14,9 +14,7 @@
 .content ul li {
   width: 220px;
   height: 230px;
-  background-color: #ffffff;
   border-radius: 5px;
-  border: 1px solid #e6e9e9;
   overflow: hidden;
   float: left;
   margin-right: 36.8px;
@@ -37,6 +35,9 @@
   height: 100px;
   box-sizing: border-box;
   padding: 5px 10px;
+  background-color: #ffffff;
+  border: 1px solid #e6e9e9;
+  border-radius: 5px;
 }
 .content ul li > a > div .content_title {
   font-size: 14px;
