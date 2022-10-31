@@ -1,0 +1,70 @@
+// 字体颜色
+@color-black-title: #444444;
+@color-black: #535353;
+@color-gray: #a0a0a0;
+@bgc-white: #ffffff;
+@bg-gray: #f3f3f3;
+// 居中
+.auto(@top:0px) {
+  margin: @top auto;
+}
+
+.content {
+  width: 1000px;
+  height: auto;
+  .auto(50px);
+  overflow: hidden;
+  aside,
+  div {
+    width: 270px;
+    height: auto;
+    background-color: @bg-gray;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    float: left;
+    h3 {
+      font-size: 20px;
+      color: @color-black-title;
+      text-indent: 0.8em;
+      padding-bottom: 6px;
+      border-bottom: 1px solid @color-gray;
+    }
+    dl {
+      box-sizing: border-box;
+      padding: 15px;
+      dt {
+        color: @color-black;
+        font-weight: 600;
+        a {
+          color: @color-black;
+        }
+      }
+      dd {
+        margin: 5px 0px 0px 16px;
+        color: @color-black;
+      }
+    }
+  }
+  div {
+    width: 700px;
+    float: right;
+    padding: 35px;
+    h3 {
+      text-indent: 0em;
+    }
+    dl {
+      padding: 0px;
+      margin-bottom: 50px;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+      dt {
+        margin: 30px 0px;
+      }
+      dd {
+        margin: 5px;
+      }
+    }
+  }
+}

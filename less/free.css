@@ -1,0 +1,64 @@
+.content {
+  width: 1000px;
+  height: auto;
+  margin: 50px auto;
+  overflow: hidden;
+}
+.content aside,
+.content div {
+  width: 270px;
+  height: auto;
+  background-color: #f3f3f3;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  float: left;
+}
+.content aside h3,
+.content div h3 {
+  font-size: 20px;
+  color: #444444;
+  text-indent: 0.8em;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #a0a0a0;
+}
+.content aside dl,
+.content div dl {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.content aside dl dt,
+.content div dl dt {
+  color: #535353;
+  font-weight: 600;
+}
+.content aside dl dt a,
+.content div dl dt a {
+  color: #535353;
+}
+.content aside dl dd,
+.content div dl dd {
+  margin: 5px 0px 0px 16px;
+  color: #535353;
+}
+.content div {
+  width: 700px;
+  float: right;
+  padding: 35px;
+}
+.content div h3 {
+  text-indent: 0em;
+}
+.content div dl {
+  padding: 0px;
+  margin-bottom: 50px;
+}
+.content div dl:last-of-type {
+  margin-bottom: 0px;
+}
+.content div dl dt {
+  margin: 30px 0px;
+}
+.content div dl dd {
+  margin: 5px;
+}

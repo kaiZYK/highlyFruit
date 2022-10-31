@@ -30,6 +30,7 @@ section .flow ul li {
   float: left;
   height: 62px;
   width: 55px;
+  cursor: pointer;
   font-size: 13px;
   padding-top: 41px;
   box-sizing: border-box;
@@ -152,7 +153,7 @@ section .flow ul li:hover {
 .content .hot_shiyong .hot_shiyong_bottom ul li {
   border: 1px solid #e6e9e9;
   border-radius: 6px;
-  margin-right: 32.91px;
+  margin-right: 31.49px;
   float: left;
   height: 285px;
   width: 220px;
@@ -171,6 +172,7 @@ section .flow ul li:hover {
   padding: 0 8px;
   border-radius: 0 0 0 6px;
   font-size: 12px;
+  z-index: 1;
 }
 .content .hot_shiyong .hot_shiyong_bottom ul li img {
   height: 130px;
@@ -184,6 +186,7 @@ section .flow ul li:hover {
   font-size: 16px;
   height: 48px;
   font-weight: bold;
+  color: #333333;
 }
 .content .hot_shiyong .hot_shiyong_bottom ul li div p:nth-of-type(1) {
   padding: 6px 0;

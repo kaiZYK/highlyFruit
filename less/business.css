@@ -1,0 +1,11 @@
+/* 内容部分 */
+.dl_list {
+  margin-bottom: 10px !important;
+}
+.dl_list dt {
+  font-size: 20px;
+}
+.dl_list dd {
+  font-size: 16px;
+  margin-left: 20px !important;
+}

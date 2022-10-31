@@ -37,7 +37,7 @@ header .wrap nav li a:hover {
   color: #fe5341;
 }
 header .wrap .r_search {
-  width: 130px;
+  width: 180px;
   float: right;
 }
 header .wrap .r_search .search {
@@ -64,6 +64,7 @@ header .wrap .r_search .login {
   border-radius: 3px;
   margin-top: 25px;
   border: 1px solid #fe5341;
+  margin-right: 10px;
 }
 header .wrap .r_search .login:hover {
   background-color: #fe5341;
