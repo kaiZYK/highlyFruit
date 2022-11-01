@@ -37,7 +37,11 @@
   padding: 5px 10px;
   background-color: #ffffff;
   border: 1px solid #e6e9e9;
-  border-radius: 5px;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: -4px;
+  position: relative;
 }
 .content ul li > a > div .content_title {
   font-size: 14px;
@@ -49,19 +53,25 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-bottom: 20px;
+}
+.content ul li > a > div .content_price,
+.content ul li > a > div .icon {
+  position: absolute;
+  bottom: 10px;
 }
 .content ul li > a > div .content_price {
   float: left;
   color: #fe5431;
   font-size: 14px;
   vertical-align: middle;
+  left: 5px;
 }
 .content ul li > a > div .icon {
   vertical-align: middle;
   float: right;
   color: #a3a3a3;
   font-size: 12px;
+  right: 5px;
 }
 .content ul li > a > div .icon span {
   display: inline-block;
