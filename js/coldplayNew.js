@@ -12,7 +12,6 @@ function ajax_() {
     if (xhr.readyState == 4) {
       if (xhr.status == 200) {
         datalist = JSON.parse(xhr.response);
-        console.log(datalist);
         // 遍历数据
         show();
       }
