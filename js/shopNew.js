@@ -1,0 +1,107 @@
+// 获取点赞标签
+var zans = null;
+// 点赞的次数
+var zanIndex = 0
+function zan() {
+  zans = document.getElementsByClassName('like');
+}
+// 获取ul
+var ul_ = document.getElementsByClassName("shopNew-list")[0];
+var dataList = [];
+function ajax_() {
+  var ajax = new XMLHttpRequest() || new ActiveXObject("Microsoft.XMLHTTP");
+  ajax.open("get", "http://127.0.0.1:3000/guid/new");
+  ajax.send();
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState == 4) {
+      if (ajax.status == 200) {
+        dataList = JSON.parse(ajax.responseText);
+        console.log(dataList);
+        holdUp();
+      } else {
+        console.log("请求错误");
+      }
+    }
+  };
+}
+// 计数器
+var index = 0;
+function holdUp() {
+  // 创建页面元素
+  for (let item of dataList) {
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.href = "##";
+    // a.href = "./shopProduct.html";
+    var img_ = document.createElement("img");
+    img_.className = "content_pic";
+    img_.src = item.img;
+    var div_1 = document.createElement("div");
+    var div_2 = document.createElement("div");
+    var div_3 = document.createElement("div");
+    var p_ = document.createElement("p");
+    p_.className = "content_title";
+    p_.innerHTML = item.text;
+    div_3.appendChild(p_);
+    var div_icon = document.createElement("div");
+    div_icon.className = "icon";
+    div_3.appendChild(div_icon);
+    var like_ = document.createElement("span");
+    like_.className = "like";
+    like_.innerHTML = item.like;
+    div_icon.appendChild(like_);
+    var comment_ = document.createElement("span");
+    comment_.className = "comment";
+    comment_.innerHTML = item.words;
+    div_icon.appendChild(comment_);
+    a.appendChild(img_);
+    a.appendChild(div_1);
+    a.appendChild(div_2);
+    a.appendChild(div_3);
+    li.appendChild(a);
+    ul_.appendChild(li);
+
+    // 给img设置跳转页面
+    img_.addEventListener("click", function () {
+      window.location.href = "../try/tryProduct.html";
+    })
+  }
+  // 点赞功能
+  // 每次渲染数据获取赞
+  zan()
+  for (let i = 0; i < zans.length; i++) {
+    zans[i].addEventListener("click", function () {
+      // 点赞的次数增加
+      zanIndex++;
+      if (zanIndex % 2) {
+        this.style.backgroundImage = "Url(../img/icon/xinRedh.png)";
+        this.style.backgroundSize = "12px";
+        this.innerHTML = this.innerHTML - 0 + 1;
+      } else {
+        this.style.backgroundImage = "Url(../img/icon/xin.png)";
+        this.style.backgroundSize = "12px";
+        this.innerHTML -= 1;
+      }
+    })
+  }
+}
+// 当页面加载时
+window.addEventListener("load", function () {
+  ajax_();
+});
+// 获取底部 点击加载更多
+var more_ = document.getElementsByClassName("more")[0];
+var under_ = document.getElementsByClassName("under")[0];
+var notMore = document.getElementsByClassName("notMore")[0];
+more_.addEventListener("click", function () {
+  more_.style.display = "none";
+  under_.style.display = "inline-block";
+  index++;
+  if (index < dataList.length) {
+    setTimeout(() => {
+      holdUp();
+      more_.style.display = "inline-block";
+      under_.style.display = "none";
+    }, 1000);
+  }
+});
