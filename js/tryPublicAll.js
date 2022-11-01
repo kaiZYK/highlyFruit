@@ -1,5 +1,3 @@
-
-// 
 // 获取整个ul
 var ul = document.getElementsByClassName('tryPublicAll_list')[0];
 // console.log(ul);
