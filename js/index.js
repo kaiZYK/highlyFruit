@@ -4,7 +4,7 @@ function zan() {
   zans = document
     .getElementsByClassName("coldplay")[1]
     .getElementsByClassName("like");
-  console.log(zans);
+//   console.log(zans);
 }
 
 // 获取整个ul
