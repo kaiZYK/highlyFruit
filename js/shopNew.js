@@ -1,9 +1,7 @@
 // 获取点赞标签
 var zans = null;
-// 点赞的次数
-var zanIndex = 0
 function zan() {
-  zans = document.getElementsByClassName('like');
+  zans = document.getElementsByClassName("like");
 }
 // 获取ul
 var ul_ = document.getElementsByClassName("shopNew-list")[0];
@@ -64,16 +62,21 @@ function holdUp() {
     // 给img设置跳转页面
     img_.addEventListener("click", function () {
       window.location.href = "../try/tryProduct.html";
-    })
+    });
   }
   // 点赞功能
   // 每次渲染数据获取赞
-  zan()
+  zan();
+  // 遍历爱心的数组
   for (let i = 0; i < zans.length; i++) {
+    // 给每一个爱心设置index属性 初始值都为0
+    zans[i].setAttribute("index", 0);
     zans[i].addEventListener("click", function () {
-      // 点赞的次数增加
-      zanIndex++;
-      if (zanIndex % 2) {
+      // 当点击当前的爱心的时候 当前的index属性加1
+      this.setAttribute("index", this.getAttribute("index") - 0 + 1);
+
+      // 判断当前的index属性的第几次 添加或删除爱心和减少数量
+      if (this.getAttribute("index") % 2) {
         this.style.backgroundImage = "Url(../img/icon/xinRedh.png)";
         this.style.backgroundSize = "12px";
         this.innerHTML = this.innerHTML - 0 + 1;
@@ -82,7 +85,7 @@ function holdUp() {
         this.style.backgroundSize = "12px";
         this.innerHTML -= 1;
       }
-    })
+    });
   }
 }
 // 当页面加载时
