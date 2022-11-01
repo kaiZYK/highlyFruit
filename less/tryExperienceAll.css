@@ -25,15 +25,19 @@ body .type_area div {
   margin: 0 auto;
 }
 body .type_area div ul {
+  width: 100%;
+  height: auto;
   padding-bottom: 31.5px;
+  overflow: hidden;
 }
 body .type_area div ul li {
-  height: 285px;
+  height: 300px;
   width: 220px;
   background-color: white;
   border: 1px solid #e6e9e9;
   border-radius: 6px;
   margin-right: 31.49px;
+  margin-top: 20px;
   float: left;
   position: relative;
   /* 动画 公共引入 */
@@ -79,7 +83,7 @@ body .type_area div ul li a .list_num_gray h2 {
   font-weight: bold;
 }
 body .type_area div ul li a .list_num_gray .num {
-  padding: 6px 0;
+  padding: 20px 0 6px 0;
 }
 body .type_area div ul li a .list_num_gray .num > span {
   font-size: 14px;
@@ -112,7 +116,7 @@ body .type_area div ul li a .list_num_orange h2 {
   font-weight: bold;
 }
 body .type_area div ul li a .list_num_orange .num {
-  padding: 6px 0;
+  padding: 20px 0 6px 0;
 }
 body .type_area div ul li a .list_num_orange .num > span {
   font-size: 14px;
@@ -145,7 +149,7 @@ body .type_area div ul li a .list_num_green h2 {
   font-weight: bold;
 }
 body .type_area div ul li a .list_num_green .num {
-  padding: 6px 0;
+  padding: 20px 0 6px 0;
 }
 body .type_area div ul li a .list_num_green .num > span {
   font-size: 14px;
