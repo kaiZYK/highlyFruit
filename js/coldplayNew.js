@@ -1,5 +1,5 @@
 // 获取整个ul
-var ul = document.getElementsByClassName("coldplayNew-list")[0];
+var ul = document.getElementsByClassName("list")[0];
 
 // 创建数据数组
 var datalist = [];
@@ -30,8 +30,6 @@ index = 0;
 // 遍历数据
 function show() {
   for (let item of datalist[index]) {
-    console.log(item);
-    console.log(item.img);
 
     // 创建ul里面的li标签
     var li = document.createElement("li");

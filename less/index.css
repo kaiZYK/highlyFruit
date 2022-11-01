@@ -66,7 +66,11 @@
   padding: 5px 10px;
   background-color: #ffffff;
   border: 1px solid #e6e9e9;
-  border-radius: 5px;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: -4px;
+  position: relative;
 }
 .content ul li > a > div .content_title,
 .coldplay ul li > a > div .content_title {
@@ -80,7 +84,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-bottom: 20px;
+}
+.content ul li > a > div .content_price,
+.coldplay ul li > a > div .content_price,
+.content ul li > a > div .icon,
+.coldplay ul li > a > div .icon {
+  position: absolute;
+  bottom: 5px;
 }
 .content ul li > a > div .content_price,
 .coldplay ul li > a > div .content_price {
@@ -88,6 +98,7 @@
   color: #fe5431;
   font-size: 14px;
   vertical-align: middle;
+  left: 5px;
 }
 .content ul li > a > div .icon,
 .coldplay ul li > a > div .icon {
@@ -95,6 +106,7 @@
   float: right;
   color: #a3a3a3;
   font-size: 12px;
+  right: 5px;
 }
 .content ul li > a > div .icon span,
 .coldplay ul li > a > div .icon span {
