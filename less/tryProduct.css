@@ -199,6 +199,9 @@ section .flow ul li:hover {
   color: #fe5341;
   border: 1px solid #fe5341;
 }
+.content .hot_shiyong .hot_shiyong_bottom ul li div .shenqing {
+  color: #333333;
+}
 .content .hot_shiyong .hot_shiyong_bottom ul li div .shenqing > span {
   color: #fe5341;
   border: none;
