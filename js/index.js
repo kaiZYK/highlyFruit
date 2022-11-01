@@ -4,7 +4,7 @@ function zan() {
   zans = document
     .getElementsByClassName("coldplay")[1]
     .getElementsByClassName("like");
-  // console.log(zans);
+  //   console.log(zans);
 }
 
 // 获取整个ul
@@ -298,7 +298,7 @@ var shopImgs = document
 // 遍历全部的img路径跳转
 for (let item of shopImgs) {
   item.addEventListener("click", function () {
-    window.location.href = "./try/tryProduct.html";
+    window.location.href = "./shop/shopProduct.html";
   });
 }
 // 获取精选部分的全部的点赞
