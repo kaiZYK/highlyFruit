@@ -237,6 +237,7 @@ var boult_r = document.getElementsByClassName("boult_r")[0];
 // 获取滚动的ul
 var scrollUl = document.getElementsByClassName("scrollul")[0];
 // console.log(scrollUl);
+
 // 报告精选部分的点赞功能
 // 获取精选部分的全部的a
 var reportAs = document

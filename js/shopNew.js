@@ -61,7 +61,7 @@ function holdUp() {
 
     // 给img设置跳转页面
     img_.addEventListener("click", function () {
-      window.location.href = "../try/tryProduct.html";
+      window.location.href = "./shopProduct.html";
     });
   }
   // 点赞功能
