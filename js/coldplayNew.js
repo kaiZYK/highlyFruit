@@ -33,7 +33,10 @@ function show() {
     console.log(item);
     // 创建li里面的a标签
     var a = document.createElement("a");
-    
-    // 创建img
+    a.href = "../try/tryProduct.html";
+
+    // 创建a标签里面的img标签
+      var img = document.createElement("img");
+      img.src=""
   }
 }
