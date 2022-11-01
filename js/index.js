@@ -30,7 +30,7 @@ var count = document.getElementsByClassName("count")[0];
 // 获取立即申请按钮
 var immediately = document.getElementsByClassName("immediately")[0];
 
-console.log(immediately);
+// console.log(immediately);
 // 点击增加申请人数和减少剩余台数
 immediately.addEventListener("click", function () {
   proposer.innerHTML = proposer.innerHTML - 0 + 1;
@@ -74,3 +74,14 @@ timer = setInterval(function () {
 function timeFormatting(time) {
   return time < 10 ? "0" + time : time;
 }
+
+// 轮播图功能
+// 获取左箭头按钮
+var boult_l = document.getElementsByClassName("boult_l")[0];
+// console.log(boult_l);
+// 获取右箭头按钮
+var boult_r = document.getElementsByClassName("boult_r")[0];
+// console.log(boult_r);
+// 获取滚动的ul
+var scrollUl = document.getElementsByClassName("scrollul")[0];
+// console.log(scrollUl);
