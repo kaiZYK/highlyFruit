@@ -57,7 +57,7 @@
 .content ul li > a > div .content_price,
 .content ul li > a > div .icon {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
 }
 .content ul li > a > div .content_price {
   float: left;
