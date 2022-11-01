@@ -14,10 +14,29 @@ function ajax_() {
       if (ajax.status == 200) {
         dataList = JSON.parse(ajax.responseText);
         console.log(dataList);
+        holdup();
       }
     }
   };
 }
-ul_.addEventListener("click",function(){
+
+// 获取底部 点击加载更多
+var more_=document.getElementsByClassName("more")[0];
+var under_=document.getElementsByClassName("under")[0];
+// console.log(more_,under_);
+more_.addEventListener("click",function(){
+    more_.style.display="none";
+    under_.style.display="inline-block";
     ajax_();
+    function holdup(){
+   // 创建页面元素
+   var a =document.createElement("a");
+   console.log(a);
+    // var li=document.createElement("li");
+    
+    }
+ 
+
 })
+
+
