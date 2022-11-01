@@ -27,16 +27,19 @@ window.addEventListener("load", function () {
   ajax_();
 });
 
+// 数据下标
+index = 0;
 // 遍历数据
 function show() {
-  for (let item of datalist) {
+  for (let item of datalist[index]) {
     console.log(item);
+    console.log(item.img);
     // 创建li里面的a标签
     var a = document.createElement("a");
     a.href = "../try/tryProduct.html";
 
     // 创建a标签里面的img标签
-      var img = document.createElement("img");
-      img.src=""
+    var img = document.createElement("img");
+    img.src = item.img;
   }
 }
