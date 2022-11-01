@@ -94,26 +94,27 @@ btn_code.addEventListener("click", () => {
       clearInterval(timer_yz);
       timer_yz = setInterval(function () {
         countDown_yz--;
+        btn_code.innerHTML = "( " + countDown_yz + " 秒 ) 重发";
         if (countDown_yz == 0) {
+          btn_code.innerHTML = "重新获取验证码";
           clearInterval(timer_yz);
-          btn_code.innerHTML = `重新获取验证码`;
+          countDown_yz = 59;
           btn_code.removeAttribute("disabled");
-          countDown_yz = 60;
         }
-        btn_code.innerHTML = `${countDown_yz} 秒后重新发送`;
+        if (countDown_yz == 58) {
+          diGit = [];
+          // 设置随机验证码
+          for (let i = 1; i <= 4; i++) {
+            var number = Math.floor(Math.random() * 10);
+            diGit.push(number);
+          }
+          diGit = diGit.join("").slice(",");
+          alert(
+            `您注册的验证码为：${diGit}，请您尽快注册，请不要把验证码泄露给其他人，如非本人请勿操作！`
+          );
+        }
       }, 1000);
     }
-    // 设置随机验证码
-    setTimeout(function () {
-      for (let i = 1; i <= 4; i++) {
-        var number = Math.floor(Math.random() * 10);
-        diGit.push(number);
-      }
-      diGit = diGit.join("").slice(",");
-      alert(
-        `您注册的验证码为：${diGit}，请您尽快注册，请不要把验证码泄露给其他人，如非本人请勿操作！`
-      );
-    }, 2000);
   } else {
     alert(`请先输入手机号`);
   }

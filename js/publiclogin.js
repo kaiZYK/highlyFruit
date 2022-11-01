@@ -1,8 +1,8 @@
 // 登录回显功能
 var login = document.getElementsByClassName("login")[0];
 var enter = document.getElementsByClassName("enter")[0];
-console.log(login);
-console.log(enter);
+// console.log(login);
+// console.log(enter);
 var suc = window.localStorage.getItem("succeed");
 var user = window.localStorage.getItem("user");
 // console.log(suc);
