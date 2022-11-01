@@ -1,3 +1,11 @@
+// 获取点赞标签
+var zans = null;
+// 点赞的次数
+var zanIndex = 0
+function zan() {
+  zans = document.getElementsByClassName('like');
+}
+
 // 获取整个ul
 var ul = document.getElementsByClassName("list")[0];
 
@@ -36,7 +44,8 @@ function show() {
 
     // 创建li里面的a标签
     var a = document.createElement("a");
-    a.href = "../try/tryProduct.html";
+    a.href = "##";
+    // a.href = "../try/tryProduct.html";
 
     // 创建a标签里面的img标签
     var a_img = document.createElement("img");
@@ -78,6 +87,29 @@ function show() {
     a.appendChild(a_div);
     li.appendChild(a);
     ul.appendChild(li);
+
+    // 给img设置跳转页面
+    a_img.addEventListener("click", function () {
+      window.location.href = "../try/tryProduct.html";
+    })
+  }
+  // 点赞功能
+  // 每次渲染数据获取赞
+  zan()
+  for (let i = 0; i < zans.length; i++) {
+    zans[i].addEventListener("click", function () {
+      // 点赞的次数增加
+      zanIndex++;
+      if (zanIndex % 2) {
+        this.style.backgroundImage = "Url(../img/icon/xinRedh.png)";
+        this.style.backgroundSize = "12px";
+        this.innerHTML = this.innerHTML - 0 + 1;
+      } else {
+        this.style.backgroundImage = "Url(../img/icon/xin.png)";
+        this.style.backgroundSize = "12px";
+        this.innerHTML -= 1;
+      }
+    })
   }
 }
 
@@ -90,6 +122,7 @@ var notMore = document.getElementsByClassName("notMore")[0];
 
 // 点击时加载数据
 more.addEventListener("click", function () {
+  zan();
   // 数据下标增加
   index++;
   // 如果数据下标大于数据数组的长度 显示暂无更多数据

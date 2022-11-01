@@ -1,3 +1,10 @@
+// 获取点赞标签
+var zans = null;
+// 点赞的次数
+var zanIndex = 0
+function zan() {
+  zans = document.getElementsByClassName('like');
+}
 // 获取ul
 var ul_ = document.getElementsByClassName("shopNew-list")[0];
 var dataList = [];
@@ -24,7 +31,8 @@ function holdUp() {
   for (let item of dataList) {
     var li = document.createElement("li");
     var a = document.createElement("a");
-    a.href = "./shopProduct.html";
+    a.href = "##";
+    // a.href = "./shopProduct.html";
     var img_ = document.createElement("img");
     img_.className = "content_pic";
     img_.src = item.img;
@@ -52,6 +60,29 @@ function holdUp() {
     a.appendChild(div_3);
     li.appendChild(a);
     ul_.appendChild(li);
+
+    // 给img设置跳转页面
+    img_.addEventListener("click", function () {
+      window.location.href = "../try/tryProduct.html";
+    })
+  }
+  // 点赞功能
+  // 每次渲染数据获取赞
+  zan()
+  for (let i = 0; i < zans.length; i++) {
+    zans[i].addEventListener("click", function () {
+      // 点赞的次数增加
+      zanIndex++;
+      if (zanIndex % 2) {
+        this.style.backgroundImage = "Url(../img/icon/xinRedh.png)";
+        this.style.backgroundSize = "12px";
+        this.innerHTML = this.innerHTML - 0 + 1;
+      } else {
+        this.style.backgroundImage = "Url(../img/icon/xin.png)";
+        this.style.backgroundSize = "12px";
+        this.innerHTML -= 1;
+      }
+    })
   }
 }
 // 当页面加载时
