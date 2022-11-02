@@ -181,7 +181,6 @@ var proposer = document.getElementsByClassName("proposer")[0];
 var count = document.getElementsByClassName("count")[0];
 // 获取立即申请按钮
 var immediately = document.getElementsByClassName("immediately")[0];
-
 // console.log(immediately);
 // 点击增加申请人数和减少剩余台数
 immediately.addEventListener("click", function () {
@@ -230,13 +229,81 @@ function timeFormatting(time) {
 // 轮播图功能
 // 获取左箭头按钮
 var boult_l = document.getElementsByClassName("boult_l")[0];
-// console.log(boult_l);
 // 获取右箭头按钮
 var boult_r = document.getElementsByClassName("boult_r")[0];
-// console.log(boult_r);
 // 获取滚动的ul
 var scrollUl = document.getElementsByClassName("scrollul")[0];
-// console.log(scrollUl);
+
+// 向左滑动 右箭头
+var translateX = 0;
+boult_r.addEventListener("click", function () {
+  // 点击清除轮播
+  clearInterval(scrollTimer);
+  // 右箭头判断是否在第三屏
+  if (translateX == -2024) {
+    // 在第三屏  再点击右箭头 再向左滑动就回到第一屏
+    translateX = 0;
+  } else {
+    // 不在第三屏就每次向左滑动一屏
+    translateX -= 1012;
+  }
+  scrollUl.style.transform = "translateX(" + translateX + "px)";
+  scrollUl.style.transition = "all 1s ease 0.5s";
+  // 点完之后重新执行定时器轮播
+  scrollTimer = setInterval(function () {
+    if (translateX == -2024) {
+      // 在第三屏  再点击右箭头 再向左滑动就回到第一屏
+      translateX = 0;
+    } else {
+      // 不在第三屏就每次向左滑动一屏
+      translateX -= 1012;
+    }
+    scrollUl.style.transform = "translateX(" + translateX + "px)";
+    scrollUl.style.transition = "all 1s ease 0.5s";
+  }, 3000);
+});
+
+// 向右滑动 左箭头
+boult_l.addEventListener("click", function () {
+  // 点击清除轮播
+  clearInterval(scrollTimer);
+  // 左箭头判断是否在第一屏
+  if (translateX == 0) {
+    // 在第一屏 再点击左箭头 再向右滑动就回到第三屏
+    translateX = -2024;
+  } else {
+    // 不在第一屏就每次向右滑动一屏
+    translateX += 1012;
+  }
+  scrollUl.style.transform = "translateX(" + translateX + "px)";
+  scrollUl.style.transition = "all 1s ease 0.5s";
+  // 点完之后重新执行定时器轮播
+  scrollTimer = setInterval(function () {
+    if (translateX == -2024) {
+      // 在第三屏  再点击右箭头 再向左滑动就回到第一屏
+      translateX = 0;
+    } else {
+      // 不在第三屏就每次向左滑动一屏
+      translateX -= 1012;
+    }
+    scrollUl.style.transform = "translateX(" + translateX + "px)";
+    scrollUl.style.transition = "all 1s ease 0.5s";
+  }, 3000);
+});
+
+// 自动向左滑动轮播
+var scrollTimer = null;
+scrollTimer = setInterval(function () {
+  if (translateX == -2024) {
+    // 在第三屏  再点击右箭头 再向左滑动就回到第一屏
+    translateX = 0;
+  } else {
+    // 不在第三屏就每次向左滑动一屏
+    translateX -= 1012;
+  }
+  scrollUl.style.transform = "translateX(" + translateX + "px)";
+  scrollUl.style.transition = "all 1s ease 0.5s";
+}, 3000);
 
 // 报告精选部分的点赞功能
 // 获取精选部分的全部的a
