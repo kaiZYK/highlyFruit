@@ -111,6 +111,21 @@ function show() {
         this.innerHTML -= 1;
       }
     });
+    // 鼠标滑上去的时候 红心点量
+    zans[i].addEventListener("mouseenter", function () {
+      this.style.backgroundImage = "Url(../img/icon/xinRedh.png)";
+      this.style.backgroundSize = "12px";
+    });
+    // 鼠标滑走的时候判断是奇数次还是偶数次 奇数次变红 偶数次变灰
+    zans[i].addEventListener("mouseleave", function () {
+      if (this.getAttribute("index") % 2) {
+        this.style.backgroundImage = "Url(../img/icon/xinRedh.png)";
+        this.style.backgroundSize = "12px";
+      } else {
+        this.style.backgroundImage = "Url(../img/icon/xin.png)";
+        this.style.backgroundSize = "12px";
+      }
+    });
   }
 }
 
