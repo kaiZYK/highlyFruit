@@ -1,9 +1,7 @@
 // 获取整个ul
 var ul = document.getElementsByClassName('tryPublicAll_list')[0];
-// console.log(ul);
 // 获取li
 var lis = ul.children;
-// console.log(lis);
 // 创建数组接受后台数据
 var datalist = [];
 
@@ -16,7 +14,6 @@ function ajax_() {
         if (xml.readyState == 4) {
             if (xml.status == 200) {
                 datalist = JSON.parse(xml.response);
-                // console.log(datalist);
                 // 遍历数组
                 show();
 
@@ -34,12 +31,9 @@ var index_color = 0;
 // 遍历数组
 function show() {
     for (var item of datalist) {
-        // console.log(item);
         // 创建li
         var li = document.createElement("li");
-
-
-
+        
         // 创建li里面的a标签
         var a = document.createElement("a");
         li.appendChild(a);

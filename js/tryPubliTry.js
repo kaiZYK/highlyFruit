@@ -7,7 +7,6 @@ function ajax_() {
         if (xml.readyState == 4) {
             if (xml.status == 200) {
                 datalist = JSON.parse(xml.response);
-                // console.log(datalist);
                 // 遍历数组
                 show();
 

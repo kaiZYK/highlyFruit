@@ -6,7 +6,6 @@ var count = document.getElementsByClassName("count")[0];
 // 获取立即申请按钮
 var immediately = document.getElementsByClassName("immediately")[0];
 
-// console.log(immediately);
 // 点击增加申请人数和减少剩余台数
 immediately.addEventListener("click", function () {
     proposer.innerHTML = proposer.innerHTML - 0 + 1;

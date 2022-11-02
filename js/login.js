@@ -7,10 +7,6 @@ var conFirmPws = document.getElementsByClassName("conFirmPws")[0];
 var check = document.getElementById("check");
 // 获取立即登录
 var btn = document.getElementsByClassName("btn")[0];
-// console.log(loginTel);
-// console.log(conFirmPws);
-// console.log(check);
-// console.log(btn);
 
 // 记住密码 功能
 window.addEventListener("load", function () {
@@ -24,8 +20,6 @@ window.addEventListener("load", function () {
 btn.addEventListener("click", function () {
   var telLocalStorage = window.localStorage.getItem("tel");
   var pwdLocalStorage = window.localStorage.getItem("pwd");
-  //   console.log(telLocalStorage);
-  //   console.log(pwdLocalStorage);
   if (
     loginTel.value == telLocalStorage &&
     conFirmPws.value == pwdLocalStorage

@@ -17,15 +17,6 @@ var input_confirmPws = document.getElementsByClassName("confirmPws")[0];
 var btn_ = document.getElementsByClassName("btn")[0];
 // 获取span
 var span_ = document.getElementsByTagName("span");
-// console.log(span_);
-// console.log(input_tel);
-// console.log(input_verify);
-// console.log(input_yz);
-// console.log(btn_code);
-// console.log(input_user);
-// console.log(input_pws);
-// console.log(input_confirmPws);
-// console.log(btn_);
 
 // 手机号验证功能
 var telBool = false;

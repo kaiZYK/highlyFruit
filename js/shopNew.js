@@ -14,7 +14,6 @@ function ajax_() {
     if (ajax.readyState == 4) {
       if (ajax.status == 200) {
         dataList = JSON.parse(ajax.responseText);
-        // console.log(dataList);
         holdUp();
       } else {
         console.log("请求错误");
@@ -30,7 +29,6 @@ function holdUp() {
     var li = document.createElement("li");
     var a = document.createElement("a");
     a.href = "##";
-    // a.href = "./shopProduct.html";
     var img_ = document.createElement("img");
     img_.className = "content_pic";
     img_.src = item.img;
