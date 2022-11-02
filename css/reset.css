@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/* 清除浮动 */
+.clearfix{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 图片动画 */
+@keyframes shade{
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.6;
+    }
+}

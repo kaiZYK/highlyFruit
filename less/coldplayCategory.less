@@ -1,0 +1,93 @@
+// 字体颜色
+@color-red: #fe5431;
+@color-title: #333333;
+@color-black: #474747;
+@color-gray: #a3a3a3;
+
+// 背景颜色
+@bgc-white: #ffffff;
+
+// 居中
+.auto(@top:0px) {
+  margin: @top auto;
+}
+
+// 背景图片
+.background(@url,@repeat:no-repeat,@x:0px,@y:0px) {
+  background-image: @url;
+  background-repeat: @repeat;
+  background-position: @x @y;
+}
+
+/* 品类部分 */
+.category {
+  background-color: #f7f7f7;
+  overflow: hidden;
+  div {
+    width: 1000px;
+    height: auto;
+    background-color: @bgc-white;
+    border: 1px solid #ebecec;
+    border-radius: 5px;
+    .auto(25px);
+    margin-bottom: 35px;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    h2 {
+      position: relative;
+      font-size: 16px;
+      font-weight: 400;
+      height: 25px;
+      padding-left: 30px;
+      line-height: 25px;
+      color: #474747;
+      margin-bottom: 30px;
+      &::after {
+        background-color: #fe5341;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 6px;
+        height: 25px;
+        left: 0px;
+        top: 0px;
+      }
+    }
+    ul {
+      width: 100%;
+      height: auto;
+      padding-left: 30px;
+      box-sizing: border-box;
+      overflow: hidden;
+      border-bottom: 1px dashed #e0e0e0;
+      li {
+        width: 121px;
+        height: auto;
+        text-align: center;
+        float: left;
+        margin: 0px 30px 13px 0px;
+        cursor: pointer;
+        &:hover a {
+          color: @color-red;
+        }
+        img {
+          width: 98px;
+          height: 98px;
+        }
+        a {
+          display: block;
+          color: @color-gray;
+          font-size: 14px;
+          margin-top: 10px;
+          &:hover {
+            color: @color-red;
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        border: none;
+        
+      }
+    }
+  }
+}

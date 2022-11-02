@@ -1,0 +1,80 @@
+body {
+    .banner {
+        width: 100%;
+        height: 300px;
+        background: url(../img/icon/original.jpg) no-repeat center top;
+        // background-size: cover;
+
+        .banner_loudspeaker {
+            width: 1000px;
+            text-align: right;
+            color: white;
+            margin: 0 auto;
+            padding-top: 40px;
+            transform: translate(800px, -800px);
+            animation: rotateIn 1s ease both;
+
+            @keyframes rotateIn {
+                0% {
+                    transform: translate(800px,
+                            -800px);
+                }
+
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            .f_r {
+                width: 400px;
+                float: right;
+
+                // background-color: black;
+                h2 {
+                    font-size: 34px;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                }
+
+                div {
+                    height: 40px;
+                    line-height: 40px;
+                    margin-bottom: 15px;
+                    padding: 0 5px;
+                    // float: right;
+                    margin-left: 140px;
+
+                    div {
+                        text-align: center;
+                        float: left;
+                        height: 40px;
+                        background-color: rgba(248, 248, 248, 0.425);
+                        margin-left: 10px;
+                        padding: 0 10px;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+
+                button {
+
+                    height: 50px;
+                    width: 240px;
+                    background-color: rgb(254,
+                            83,
+                            65);
+                    border: none;
+                    color: white;
+                    border-radius: 5px;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
