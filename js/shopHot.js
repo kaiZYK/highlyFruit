@@ -6,7 +6,7 @@ function ajax_() {
     if (ajax.readyState == 4) {
       if (ajax.status == 200) {
         dataList = JSON.parse(ajax.responseText);
-        console.log(dataList);
+        // console.log(dataList);
         holdUp();
       } else {
         console.log("请求错误");

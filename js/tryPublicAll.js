@@ -16,7 +16,7 @@ function ajax_() {
         if (xml.readyState == 4) {
             if (xml.status == 200) {
                 datalist = JSON.parse(xml.response);
-                console.log(datalist);
+                // console.log(datalist);
                 // 遍历数组
                 show();
 
@@ -34,7 +34,7 @@ var index_color = 0;
 // 遍历数组
 function show() {
     for (var item of datalist) {
-        console.log(item);
+        // console.log(item);
         // 创建li
         var li = document.createElement("li");
 
