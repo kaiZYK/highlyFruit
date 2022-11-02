@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 });
 
 // 数据下标
-index = 0;
+var index = 0;
 // 遍历数据
 function show() {
   for (let item of datalist[index]) {
@@ -99,7 +99,6 @@ function show() {
     zans[i].addEventListener("click", function () {
       // 当点击当前的爱心的时候 当前的index属性加1
       this.setAttribute("index", this.getAttribute("index") - 0 + 1);
-
       // 判断当前的index属性的第几次 添加或删除爱心和减少数量
       if (this.getAttribute("index") % 2) {
         this.style.backgroundImage = "Url(../img/icon/xinRedh.png)";
