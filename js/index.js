@@ -114,6 +114,21 @@ function show() {
         this.innerHTML -= 1;
       }
     });
+    // 鼠标滑上去的时候 红心点量
+    zans[i].addEventListener("mouseenter", function () {
+      this.style.backgroundImage = "Url(./img/icon/xinRedh.png)";
+      this.style.backgroundSize = "12px";
+    });
+    // 鼠标滑走的时候判断是奇数次还是偶数次 奇数次变红 偶数次变灰
+    zans[i].addEventListener("mouseleave", function () {
+      if (this.getAttribute("index") % 2) {
+        this.style.backgroundImage = "Url(./img/icon/xinRedh.png)";
+        this.style.backgroundSize = "12px";
+      } else {
+        this.style.backgroundImage = "Url(./img/icon/xin.png)";
+        this.style.backgroundSize = "12px";
+      }
+    });
   }
 }
 
@@ -271,13 +286,28 @@ for (let i = 0; i < reportZans.length; i++) {
 
     // 判断当前的index属性的第几次 添加或删除爱心和减少数量
     if (this.getAttribute("index") % 2) {
-      this.style.backgroundImage = "Url(./img/icon/xinRedh.png)";
+      this.style.backgroundImage = "Url(./img/icon/use5.png)";
       this.style.backgroundSize = "12px";
       this.innerHTML = this.innerHTML - 0 + 1;
     } else {
       this.style.backgroundImage = "Url(./img/icon/zan.png)";
       this.style.backgroundSize = "12px";
       this.innerHTML -= 1;
+    }
+  });
+  // 鼠标滑上去的时候 红心点量
+  reportZans[i].addEventListener("mouseenter", function () {
+    this.style.backgroundImage = "Url(./img/icon/use5.png)";
+    this.style.backgroundSize = "12px";
+  });
+  // 鼠标滑走的时候判断是奇数次还是偶数次 奇数次变红 偶数次变灰
+  reportZans[i].addEventListener("mouseleave", function () {
+    if (this.getAttribute("index") % 2) {
+      this.style.backgroundImage = "Url(./img/icon/use5.png)";
+      this.style.backgroundSize = "12px";
+    } else {
+      this.style.backgroundImage = "Url(./img/icon/zan.png)";
+      this.style.backgroundSize = "12px";
     }
   });
 }
@@ -322,6 +352,21 @@ for (let i = 0; i < shopZans.length; i++) {
       this.style.backgroundImage = "Url(./img/icon/xin.png)";
       this.style.backgroundSize = "12px";
       this.innerHTML -= 1;
+    }
+  });
+  // 鼠标滑上去的时候 红心点量
+  shopZans[i].addEventListener("mouseenter", function () {
+    this.style.backgroundImage = "Url(./img/icon/xinRedh.png)";
+    this.style.backgroundSize = "12px";
+  });
+  // 鼠标滑走的时候判断是奇数次还是偶数次 奇数次变红 偶数次变灰
+  shopZans[i].addEventListener("mouseleave", function () {
+    if (this.getAttribute("index") % 2) {
+      this.style.backgroundImage = "Url(./img/icon/xinRedh.png)";
+      this.style.backgroundSize = "12px";
+    } else {
+      this.style.backgroundImage = "Url(./img/icon/xin.png)";
+      this.style.backgroundSize = "12px";
     }
   });
 }
